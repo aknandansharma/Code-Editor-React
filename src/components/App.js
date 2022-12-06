@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Editor from './Editor'
 import useLocalStorage from '../hooks/useLocalStorage'
 import Header from './Header';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHtml5, faCss3Alt, faJs } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   const [html, setHtml] = useLocalStorage('html', '')
@@ -25,23 +27,23 @@ function App() {
 
   return (
     <>
-      <Header/>
+      <Header />
       <div className="pane top-pane">
         <Editor
           language="xml"
-          displayName="HTML"
+          displayName=<FontAwesomeIcon className="html-icon" icon={faHtml5} />
           value={html}
           onChange={setHtml}
         />
         <Editor
           language="css"
-          displayName="CSS"
+          displayName=<FontAwesomeIcon className="css-icon" icon={faCss3Alt} />
           value={css}
           onChange={setCss}
         />
         <Editor
           language="javascript"
-          displayName="JS"
+          displayName=<FontAwesomeIcon className="js-icon" icon={faJs} />
           value={js}
           onChange={setJs}
         />
@@ -51,13 +53,13 @@ function App() {
           srcDoc={srcDoc}
           title="output"
           sandbox="allow-scripts"
-          frameBorder="0"
+          frameborder="0"
           width="100%"
           height="100%"
         />
       </div>
     </>
-  )
+  );
 }
 
 export default App;

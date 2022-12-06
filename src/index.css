@@ -1,9 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   margin: 0;
+  padding: 0;
 }
 
 .top-pane {
@@ -65,8 +62,6 @@ body {
 
 .logodiv{
   display: flex;
-  background-color: rgba(255, 252, 248, 0);
-
 }
 img{
   margin-left: 30px;
@@ -92,4 +87,49 @@ ul{
 }
 i{
   cursor: pointer;
+}
+
+.html-icon{
+  font-size: 30px;
+  color: red;
+
+}
+.css-icon{
+  font-size: 30px;
+  color: cyan;
+}
+.js-icon{
+  font-size: 30px;
+  color: yellow;
+}
+
+
+.social-container {
+  background: rgb(255, 253, 253);
+  padding: 25px 50px;
+  margin-left: 680px;
+}
+a.social {
+  margin: 0 1rem;
+  transition: transform 350ms;
+  display: inline-block;
+}
+a.social:hover {
+  transform: translateY(-5px);
+}
+
+a.linkdin {
+  color: #1b97eb;
+}
+
+a.insta {
+  color: #ca3b9f;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.github {
+  color: black;
 }
